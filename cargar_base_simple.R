@@ -11,6 +11,10 @@ actividad02 <- read_excel("C:/Users/PC/Downloads/actividad01.xlsx",
                           sheet = "variables")
 View(actividad02)
 
+actividad03 <- read_excel("C:/Users/PC/Downloads/actividad01.xlsx", 
+                          sheet = "variables")
+View(actividad03)
+
 arrange_01 = actividad01 %>% 
   group_by(Blitz_rating) %>% 
   summarise(n()) %>% 
@@ -41,4 +45,8 @@ filtro_rating = actividad01 %>%  filter(Standard_Rating > 4000)
 
 actividad01 %>% group_by(Gender) %>% summarise(n())
 
-###revent.snapshot()
+
+renv::snapshot()
+
+renv::snapshot()
+renv::snapshot()
